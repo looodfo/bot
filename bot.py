@@ -5,7 +5,9 @@ from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandle
 # ==================
 # НАСТРОЙКИ
 # ==================
-TOKEN = "8100975204:AAG9qYVWKBlezS4eOZ6FKTfNU4zn0YJx99o"
+import os
+TOKEN = os.getenv("TOKEN")
+
 
 # Ваш приветственный текст
 WELCOME_TEXT = "Привет! 👋 Я задам тебе несколько вопросов. Когда будешь готов — жми 'Начать'."
@@ -145,3 +147,4 @@ if __name__ == "__main__":
 
     print("Бот запущен...")
     app.run_polling()
+
